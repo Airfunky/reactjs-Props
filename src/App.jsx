@@ -8,27 +8,26 @@ function App(){
     <>
     <div>
       <Header
-      title="Daily News"
+      title="Lorenzo's Portfolio"
       nav1="Home"
-      nav2="Sports"
-      nav3="Technology"
+      nav2="About me"
+      nav3="Studies"
       nav4="Contact"
       />
 
       <Hero
-        headline="Breaking News"
-        description="A new AI technology is changing the future of education"
+        headline="About me"
+        description="Hi im Lorenzo, im deeply interested in programming"
       />
 
       <Sidebar
-      title="Latest News"
-      item1="Football World Cup"
-      item2="Stock Market Update"
-      item3="Weather Forecast"
+      title="Contact"
+      phone="607922395"
+      email="lorenzo8banachewicz@gmail.com"
       />
 
       <Footer
-      text="@ 2026 Daily News. All Rights Reserved."
+      text="@ 2026 Lorenzo"
       />
       
       

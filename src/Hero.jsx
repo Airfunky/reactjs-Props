@@ -1,10 +1,10 @@
 function Hero({headline, description}){
     return(
         <>
-            <section style={{backgroundColor:'tan', padding: '20px'}}>
+            <section style={{backgroundColor:'tan', color: 'black', padding: '20px'}}>
                 <h2>{headline}</h2>
 
-                <p>{description}</p>
+                <p><strong><i>{description}</i></strong></p>
             </section>
         </>
     );
