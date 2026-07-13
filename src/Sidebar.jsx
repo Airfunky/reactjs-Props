@@ -3,7 +3,7 @@ function Sidebar() {
     <aside
       style={{
         width: "200px",
-        background: "#ddd",
+        background: "GhostWhite",
         padding: "20px",
         float: "left",
         minHeight: "300px", 

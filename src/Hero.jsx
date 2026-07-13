@@ -2,7 +2,7 @@ function Hero() {
   return (
     <section
       style={{
-        background: "#f4f4f4",
+        background: "GhostWhite",
         padding: "40px",
         textAlign: "center",
         color: "black"
@@ -10,7 +10,7 @@ function Hero() {
     >
       <input style={{ height: "20px"}}type="text" placeholder="Search Product"></input>
       <button>Search</button>
-      <p>Find the best products at the best prices.</p>
+      <p>Find the best products at the best prices</p>
       <button>Shop Now</button>
     </section>
   );
