@@ -1,10 +1,18 @@
-function Footer({text}){
-    return(
-        <footer style={{backgroundColor: 'maroon', padding: '15px', textalign: 'center'}}>
-
-            <p>{text}</p>
-        </footer>
-    );
+function Footer() {
+  return (
+    <footer
+      style={{
+        background: "#333",
+        color: "#fff",
+        textAlign: "center",
+        padding: "15px",
+        marginTop: "20px",
+        clear: "both",
+      }}
+    >
+      <p>@ 2026 Product List Lorenzo. All rights reserved.</p>
+    </footer>
+  );
 }
 
 export default Footer;

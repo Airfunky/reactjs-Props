@@ -1,6 +1,17 @@
+import Product from "./Product";
+
 function ProductList({products}){
     return(
-    <div>
+    <div
+     style={{
+        display: "flex",
+        
+        gap: "20px",
+        flex: 1,
+        padding: "20px",
+      }}
+      >
+
         {products.map((product, index) => 
         <h2 key={index}>
             {product.name}
@@ -9,8 +20,8 @@ function ProductList({products}){
             <img src={product.img} alt={product.name} width="150"/>
              <br/><br/>
         </h2>)
-         
         }
+
     </div>
     );
 }
