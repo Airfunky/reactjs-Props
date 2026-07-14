@@ -2,15 +2,16 @@ import { useState } from "react";
 
 function App() {
  
- const [name, setName] = useState("");
+ const [text, setText] = useState("");
 
   return (
     <div>
-      <h1>Greeting App</h1>
+      <h1>Character Counter</h1>
       <input type="text"
-      placeholder="Enter Your Name"
-      onChange={(e) => setName(e.target.value)} />
-      <h2>Hello {name}</h2>
+      placeholder="Enter Your text"
+      onChange={(e) => setText(e.target.value)} />
+      <h2> {text}</h2>
+      <p>Characters: {text.length}</p>
     </div>
  
   );
