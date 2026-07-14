@@ -1,48 +1,21 @@
-import ProductList from "./ProductList";
 import Header from "./Header";
 import Hero from "./Hero";
-import Sidebar from "./Sidebar";
+import ProductList from "./ProductList";
 import Footer from "./Footer";
-function App() {
-  const products = [
-  {
-    name: "Laptop",
-    price: 800,
-    img: "laptop.jpg"
-    
-  },
-  {
-    name: "Phone",
-    price: 500,
-    img: "phone.jpg"
-  },
-  {
-    name: "Headphone",
-    price: 100,
-    img: "headphone.jpg"
-  }
-];
 
+function App() {
+  
   return (
     <div>
+      <Header title="SigmaShop" a1="Home" a2="Products" a3="About" a4="Contact"/>
 
-    <Header
-    />
+      <Hero search="Search Product..."  submit="Search" button1="Laptop" button2="Mobile" button3="Accessories" button4="Gaming"/>
 
-    <Hero
+      <ProductList/>
 
-    />
-
-     <div>
-        <Sidebar />
-        <ProductList  products={products} />
-      </div>
-
-    <Footer/>
-
-    
+      <Footer text="&copy; SigmaShop | All rights reserved"/>
     </div>
-  );
+  )
 }
 
 export default App;
