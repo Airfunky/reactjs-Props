@@ -1,17 +1,29 @@
 import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState (0);
+  function handleclick(){
+    alert("Hello!");
+  }
+
+  const [text, setText] = useState("siema");
+
+  const [liked, setLiked] = useState(false);
 
   return (
     <div>
-      <h1>{count}</h1>
+      <button onClick={handleclick}>Touch me</button>
 
-      <button onClick={() => setCount(count + 1) }> Increase </button>
+     <br></br>
 
-      <button onClick={() => setCount(count - 1) }> Decrease </button>
+      <h2>{text}</h2>
+      <button onClick={() => setText("Welcome to react")}>Change Text</button>
 
-      <button onClick={() => setCount(0) }> Reset </button>
+      <br></br>
+    
+    <button onClick={() => setLiked(!liked)}>
+      {liked ? "Liked": "Like"}
+    </button>
+      
     </div>
   );
 }
