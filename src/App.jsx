@@ -2,13 +2,13 @@ import { useState } from "react";
 
 function App() {
  
-const isLogin = false;
+const isAdmin = true;
 
 return(
   <div>
-    {isLogin ? <h1>Welcome Back</h1> : <h1>Please Login</h1> }
+    {isAdmin && <h2>Admin Panel</h2>}
   </div>
-)
+);
    
 }
 
