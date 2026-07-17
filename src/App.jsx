@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 
+function LiveClock() {
+  const [time, setTime] = useState(new Date());
 
-function App() {
- 
-const [show, setShow] = useState(false);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
 
-return(
-  <div>
-    <button onClick={() => setShow(!show)}>
-      {show ? "Hide" : "Show"}
-    </button>
-    {show && <h2>Welcome to React!</h2>}
-  </div>
-); 
+    return () => clearInterval(timer); 
+  }, []); 
+
+  return (
+    <div>
+      <h2>{time.toLocaleTimeString()}</h2>
+    </div>
+  );
 }
 
-export default App;
+export default LiveClock;
