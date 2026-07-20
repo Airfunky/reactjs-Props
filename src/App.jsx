@@ -1,27 +1,32 @@
-import { useState, useEffect } from 'react';
+import { useState } from "react";
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [students, setStudents] = useState(["Ahmed", "John", "Sara"]);
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
-      });
-  }, []);
+  function addStudent() {
+    setStudents([...students, "David"]);
+  }
+
+  function deleteStudent() {
+    setStudents(students.filter(student => student !== "John"));
+  }
+
+  function editStudent() {
+    setStudents(
+      students.map(student =>
+        student === "Ahmed" ? "Ahmed Ali" : student
+      )
+    );
+  }
 
   return (
     <div>
-      <h1>Users</h1>
-      {users.map((user) => (
-        <div key={user.id}>
-          <h2>{user.name}</h2>
-          <p>@{user.username}</p>
-          <p>{user.email}</p>
-          <p>{user.address.city}, {user.address.street}</p>
-          <p>{user.company.name}</p>
-        </div>
+      <button onClick={addStudent}>Add</button>
+      <button onClick={editStudent}>Edit</button>
+      <button onClick={deleteStudent}>Delete</button>
+
+      {students.map((student, index) => (
+        <h2 key={index}>{student}</h2>
       ))}
     </div>
   );
